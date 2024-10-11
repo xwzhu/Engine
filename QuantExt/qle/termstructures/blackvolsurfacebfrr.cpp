@@ -604,7 +604,7 @@ Volatility BlackVolatilitySurfaceBFRR::blackVolImpl(Time t, Real strike) const {
 
     DeltaVolQuote::DeltaType dt_c =
         dt_ == (DeltaVolQuote::Spot || dt_ == DeltaVolQuote::Fwd) ? DeltaVolQuote::Fwd : DeltaVolQuote::PaFwd;
-    DeltaVolQuote::AtmType at_c = DeltaVolQuote::AtmDeltaNeutral;
+    DeltaVolQuote::AtmType at_c = DeltaVolQuote::AtmFwd;
 
     /* find the vols on both smiles for the artificial smile conventions */
 
